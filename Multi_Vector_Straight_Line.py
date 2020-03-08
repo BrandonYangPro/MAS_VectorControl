@@ -1,4 +1,4 @@
-# This code provides that the cars/vectors would 
+# This code provides that the cars/vectors would do the car-following behaviors
 
 import anki_vector
 import time
@@ -62,15 +62,6 @@ if __name__=="__main__":
     main()    
         
                 
-
-
-
-
-
-# define the vector class
-
-        
-# plot the trajectory
 
 
 # car following model implementation here

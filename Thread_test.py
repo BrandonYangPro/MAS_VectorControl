@@ -1,3 +1,6 @@
+# Folloing codes showing the process to get the multi threading working in different robots or different functions,
+# or the motions would show obvious time delays among different Vectors
+
 import anki_vector
 import time
 import re
@@ -10,7 +13,7 @@ from anki_vector.util import degrees, distance_mm, speed_mmps
 
 
 
-
+# the functions to test whether multi threading works, making sure the motions are happening at the same time
 def motion_control(robot_name):
     print("got it")
     with anki_vector.Robot(name=robot_name) as robot: 
@@ -18,9 +21,15 @@ def motion_control(robot_name):
         for i in range(10):
             print(i)
 
+
+
 # two robot names:   Vector-T8B3     &&     Vector-H3D8
 
+
 # version 1 on parallel processing
+# Results:   X  
+#         not working
+
 '''
 def main():
     T1 = mp.Process(target=motion_control("Vector-T8B3"))
@@ -30,6 +39,10 @@ def main():
 '''
 
 # version 2 on parallel processing
+# Results:   X  
+#         not working
+
+
 '''
 def main():
     pool = mp.Pool(processes = 2)
@@ -39,8 +52,10 @@ def main():
 
 
 
-# version 3 on parallel processing by using threading.Thread
 
+# version 3 on parallel processing by using threading.Thread
+# Results:   O  
+#          working
 
 
 def main():

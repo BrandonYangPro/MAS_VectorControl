@@ -1,3 +1,5 @@
+# This doc tries to testify the functions relevant to project, like motion_control(), data_read() from the range sensor etc
+
 import anki_vector
 import time
 import re
@@ -21,6 +23,7 @@ def data_read():
             if proximity_data is not None:
                 print('Proximity distance: {0}'.format(proximity_data.distance))
                 measure = data_convert(format(proximity_data.distance))
+                # check whether could print out information when longer than a value
                 if(measure>300):
                     print("long")
                     break
