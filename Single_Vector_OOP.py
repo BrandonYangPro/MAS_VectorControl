@@ -21,7 +21,10 @@ class car:
             robot.behavior.drive_straight(distance_mm(dist), speed_mmps(vel))
             #if(self.proximity_read()):
                 #robot.behavior.drive_straight(distance_mm(dist), speed_mmps(vel/2))
+    def print_a(self):
     
+    def print_b(self):
+        
     
     def proximity_read(self):
         with anki_vector.Robot(name=self.name) as robot:
@@ -39,3 +42,5 @@ class car:
                     if(measure<100):
                         print("short")
                         return TRUE
+                        
+                        
